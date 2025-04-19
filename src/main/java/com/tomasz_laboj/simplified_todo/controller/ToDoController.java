@@ -42,4 +42,9 @@ public class ToDoController {
         }
     }
 
+    @DeleteMapping("/{id}")
+    public void deleteToDoItem(@PathVariable Long id) {
+        repository.deleteById(id);
+    }
+
 }
